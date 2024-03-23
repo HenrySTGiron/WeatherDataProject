@@ -26,9 +26,9 @@ default_args = {
 def create_climate_schema_and_table():
     try:
         conn = snowflake.connector.connect(
-            user='HUNGRYHEN',
-            password='Darksouls123!',
-            account='FALHXOU-RAB73489'
+            user='user',
+            password='password',
+            account='account'
             )
         logger.info('Connection successful')
     except snowflake.connector.errors.DatabaseError as e:
@@ -106,9 +106,9 @@ def create_climate_schema_and_table():
 def create_fashion_schema_and_table():
     try:
         conn = snowflake.connector.connect(
-            user='HUNGRYHEN',
-            password='Darksouls123!',
-            account='FALHXOU-RAB73489',
+            user='user',
+            password='password',
+            account='account',
             warehouse='Climate_Fashion_warehouse',
             database='Climate_Fashion_DB'
             )
