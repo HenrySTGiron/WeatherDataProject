@@ -13,9 +13,9 @@ logger = logging.getLogger(__name__)
 os.environ["no_proxy"]="*"
 
 conn = snowflake.connector.connect(
-    user='HUNGRYHEN',
-    password='Darksouls123!',
-    account='FALHXOU-RAB73489',
+    user='user',
+    password='password',
+    account='account',
     warehouse='CLIMATE_FASHION_WAREHOUSE',
     database='Climate_Fashion_DB',
     schema='Climate_Schema'
