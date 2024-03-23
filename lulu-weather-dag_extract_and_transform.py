@@ -23,9 +23,9 @@ start_date = '2023-03-01'
 end_date = '2024-03-01'
 
 conn = snowflake.connector.connect(
-    user='HUNGRYHEN',
-    password='Darksouls123!',
-    account='FALHXOU-RAB73489',
+    user='user',
+    password='password',
+    account='account',
     warehouse='Climate_Fashion_warehouse',
     database='Climate_Fashion_DB',
     schema='Public'
