@@ -57,13 +57,27 @@ def final_cleanup():
     # Ensure 'is_training_data' remains boolean
     for entry in climate_fact_data:
         entry['is_training_data'] = bool(entry['is_training_data'])
+        
+    # Rearrange such that it can be inserted into the fact table    
+arranged_data = []
+    for entry in climate_fact_data:
+        arranged_entry = {
+        'date_id': entry['date_id'],
+        'station_id': entry['station'],
+        "min_temp": entry["TMIN"],
+        "max_temp": entry["TMAX"],
+        "snowfall": entry["SNOW"],
+        "snow_depth": entry.get("SNWD", 0),  # Handle missing SNWD with default 0
+        "rain": entry.get("PRCP", 0),  # Handle missing PRCP with default 0
+        "is_training_data": entry["is_training_data"] 
+        }
+        arranged_data.append(arranged_entry)
 
     # Write the modified JSON data to a new file
     with open('modified_json_data.json', 'w') as output_file:
-        json.dump(climate_fact_data, output_file, indent=4)
+        json.dump(arranged_data, output_file, indent=4)
 
     logger.info('Modified JSON data file created successfully.')
-
 def weather_load():
     try:
         create_json_file_format = '''
