@@ -1,6 +1,6 @@
 # Weather Data Project Setup for Fashion trend
 Data Engineering project 
-Our data science team is developing a model to interpret and predict the impacts of weather on fashion purchases.  In addition to all of the ecom and customer data we already have, they will require climate and weather data to properly train their models.
+Suppose a data science team is developing a model to interpret and predict the impacts of weather on fashion purchases.  In addition to all of the ecom and customer data that is already present, one will require climate and weather data to properly train their models.
 
 They have specifically requested the following data as a minimum starting point to test their models, but are open to suggestions for other data that is discovered along the way to help train their models:
 •	Zip code level daily weather statistics for the Boston Metro Area:
